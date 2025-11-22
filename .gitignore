@@ -1,0 +1,36 @@
+# 构建目录
+cmake-build-*/
+build/
+*/build/
+
+# 可执行文件
+*.exe
+*.out
+*.app
+
+# 对象文件
+*.o
+*.obj
+
+# 库文件
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+
+# 调试文件
+*.pdb
+*.idb
+
+# IDE文件
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
