@@ -6,7 +6,12 @@ int main() {
     // 调用练习函数
 //    exercise2_1();
 //    exercise2_2();
-    exercise2_3();
+//    exercise2_3();
+//    exercise2_4();
+//    exercise2_5();
+//    exercise2_6();
+//    exercise2_7();
+    exercise2_8();
 
     return 0;
 }
