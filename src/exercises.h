@@ -10,6 +10,13 @@ void exercise2_5(void);
 void exercise2_6(void);
 void exercise2_7(void);
 void exercise2_8(void);
+void exercise3_1(void);
+void exercise3_2(void);
+void exercise3_3(void);
+void exercise3_4(void);
+void exercise3_5(void);
+void exercise3_6(void);
+
 // 后续添加更多函数声明...
 
 #endif
