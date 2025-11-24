@@ -12,9 +12,13 @@ int main() {
 //    exercise2_6();
 //    exercise2_7();
 //    exercise2_8();
+
 //    exercise3_1();
 //    exercise3_2();
-    exercise3_3();
+//    exercise3_3();
+//    exercise3_4();
+//    exercise3_5();
+    exercise3_6();
 
     return 0;
 }
