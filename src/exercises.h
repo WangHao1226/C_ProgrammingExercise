@@ -16,6 +16,12 @@ void exercise3_3(void);
 void exercise3_4(void);
 void exercise3_5(void);
 void exercise3_6(void);
+void exercise4_1(void);
+void exercise4_2(void);
+void exercise4_3(void);
+void exercise4_4(void);
+void exercise4_5(void);
+void exercise4_6(void);
 
 // 后续添加更多函数声明...
 

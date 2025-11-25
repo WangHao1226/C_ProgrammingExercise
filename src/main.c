@@ -18,7 +18,13 @@ int main() {
 //    exercise3_3();
 //    exercise3_4();
 //    exercise3_5();
-    exercise3_6();
+//    exercise3_6();
+
+//    exercise4_1();
+//    exercise4_2();
+//    exercise4_3();
+//    exercise4_4();
+    exercise4_5();
 
     return 0;
 }
