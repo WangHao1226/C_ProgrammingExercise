@@ -24,7 +24,12 @@ int main() {
 //    exercise4_2();
 //    exercise4_3();
 //    exercise4_4();
-    exercise4_5();
+//    exercise4_5();
+//    exercise4_6();
+
+//    exercise5_1();
+//    exercise5_2();
+    exercise5_3();
 
     return 0;
 }
