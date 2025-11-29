@@ -41,6 +41,4 @@ int exercise2_8(){
     // 计算第三个月后的余额
     balance = balance - monthly_payment + (balance * monthly_interest_rate);
     printf("Balance remaining after third payment: $%.2f\n", balance);
-
-    return 0;
 }
