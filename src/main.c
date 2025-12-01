@@ -62,11 +62,11 @@ int main() {
 //    exercise7_8();
 //    exercise7_9();
 //    exercise7_10();
-    exercise7_11();
+//    exercise7_11();
 //    exercise7_12();
 //    exercise7_13();
 //    exercise7_14();
-//    exercise7_15();
+    exercise7_15();
 
     return 0;
 }
