@@ -66,7 +66,24 @@ int main() {
 //    exercise7_12();
 //    exercise7_13();
 //    exercise7_14();
-    exercise7_15();
+//    exercise7_15();
 
+//    exercise8_1();
+//    exercise8_2();
+//    exercise8_3();
+//    exercise8_4();
+//    exercise8_5();
+    exercise8_6();
+//    exercise8_7();
+//    exercise8_8();
+//    exercise8_9();
+//    exercise8_10();
+//    exercise8_11();
+//    exercise8_12();
+//    exercise8_13();
+//    exercise8_14();
+//    exercise8_15();
+//    exercise8_16();
+//    exercise8_17();
     return 0;
 }

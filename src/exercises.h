@@ -66,6 +66,25 @@ void exercise7_13(void);
 void exercise7_14(void);
 void exercise7_15(void);
 
+void exercise8_1(void);
+void exercise8_2(void);
+void exercise8_3(void);
+void exercise8_4(void);
+void exercise8_5(void);
+void exercise8_6(void);
+void exercise8_7(void);
+void exercise8_8(void);
+void exercise8_9(void);
+void exercise8_10(void);
+void exercise8_11(void);
+void exercise8_12(void);
+void exercise8_13(void);
+void exercise8_14(void);
+void exercise8_15(void);
+void exercise8_16(void);
+void exercise8_17(void);
+
+
 // 后续添加更多函数声明...
 
 #endif
