@@ -73,10 +73,10 @@ int main() {
 //    exercise8_3();
 //    exercise8_4();
 //    exercise8_5();
-    exercise8_6();
+//    exercise8_6();
 //    exercise8_7();
 //    exercise8_8();
-//    exercise8_9();
+    exercise8_9();
 //    exercise8_10();
 //    exercise8_11();
 //    exercise8_12();
