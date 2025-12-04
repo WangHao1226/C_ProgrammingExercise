@@ -76,14 +76,14 @@ int main() {
 //    exercise8_6();
 //    exercise8_7();
 //    exercise8_8();
-    exercise8_9();
+//    exercise8_9();
 //    exercise8_10();
 //    exercise8_11();
 //    exercise8_12();
 //    exercise8_13();
 //    exercise8_14();
 //    exercise8_15();
-//    exercise8_16();
+    exercise8_16();
 //    exercise8_17();
     return 0;
 }

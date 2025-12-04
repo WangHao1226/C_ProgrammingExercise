@@ -45,7 +45,9 @@ int exercise8_9() {
             // 如果所有方向都尝试过了，则终止
             int tried_count = 0;
             for(int i = 0; i < 4; i++) {
-                if(tried_directions[i]) tried_count++;
+                if(tried_directions[i]) {
+                    tried_count++;
+                }
             }
             if(tried_count == 4) {
                 move_possible = false;
@@ -54,7 +56,9 @@ int exercise8_9() {
 
             // 随机选择一个未尝试过的方向
             direction = rand() % 4;
-            if(tried_directions[direction]) continue;
+            if(tried_directions[direction]) {
+                continue;
+            }
             tried_directions[direction] = true;
 
             // 根据方向计算新位置
