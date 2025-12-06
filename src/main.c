@@ -86,13 +86,13 @@ int main() {
 //    exercise8_16();
 //    exercise8_17();
 
-    exercise9_1();
+//    exercise9_1();
 //    exercise9_2();
 //    exercise9_3();
 //    exercise9_4();
 //    exercise9_5();
 //    exercise9_6();
 //    exercise9_7();
-//    exercise9_8();
+    exercise9_8();
     return 0;
 }
