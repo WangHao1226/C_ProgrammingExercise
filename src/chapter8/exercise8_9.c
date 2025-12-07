@@ -87,6 +87,7 @@ int exercise8_9() {
             break;
         }
 
+
         // 移动到新位置并标记
         row = new_row;
         col = new_col;

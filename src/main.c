@@ -93,6 +93,15 @@ int main() {
 //    exercise9_5();
 //    exercise9_6();
 //    exercise9_7();
-    exercise9_8();
+//    exercise9_8();
+
+//    exercise10_1();
+//    exercise10_2();
+//    exercise10_3();
+//    exercise10_4();
+//    exercise10_5();
+//    exercise10_6();
+    exercise10_7();
+
     return 0;
 }
