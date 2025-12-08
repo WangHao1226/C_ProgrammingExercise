@@ -101,7 +101,11 @@ int main() {
 //    exercise10_4();
 //    exercise10_5();
 //    exercise10_6();
-    exercise10_7();
+//    exercise10_7();
 
+//    exercise11_1();
+//    exercise11_2();
+    exercise11_3();
+//    exercise11_4();
     return 0;
 }

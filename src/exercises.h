@@ -101,6 +101,11 @@ void exercise10_5(void);
 void exercise10_6(void);
 void exercise10_7(void);
 
+void exercise11_1(void);
+void exercise11_2(void);
+void exercise11_3(void);
+void exercise11_4(void);
+
 
 // 后续添加更多函数声明...
 
