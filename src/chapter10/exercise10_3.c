@@ -9,7 +9,7 @@
 //#define NUM_RANKS 13
 //#define NUM_SUITS 4
 //#define NUM_CARDS 5
-//
+///* external variables */
 //bool straight, flush, four, three;
 //int pairs; /* can be 0, 1, or 2 */
 ///* prototypes */
@@ -20,8 +20,7 @@
 // * main: Calls read_cards, analyze_hand, and print_result *
 // * repeatedly. *
 // ************************************************************/
-//int exercise10_3(void)
-//{
+//int exercise10_3(void){
 //    int hand[NUM_CARDS][2];
 //    for (;;) {
 //        read_cards(hand);
@@ -34,8 +33,7 @@
 // * variables num_in_rank and num_in_suit; *
 // * checks for bad cards and duplicate cards. *
 // ************************************************************/
-//void read_cards(int hand[][2])
-//{
+//void read_cards(int hand[][2]){
 //    char ch, rank_ch, suit_ch;
 //    int rank, suit;
 //    bool bad_card;
@@ -47,7 +45,6 @@
 //        printf("Enter a card: ");
 //        fflush(stdout);
 //        rank_ch = getchar();
-//
 //        switch (rank_ch) {
 //            case '0': exit(EXIT_SUCCESS);
 //            case '2': rank = 0; break;
@@ -65,6 +62,7 @@
 //            case 'a': case 'A': rank = 12; break;
 //            default: bad_card = true;
 //        }
+//
 //        suit_ch = getchar();
 //        switch (suit_ch) {
 //            case 'c': case 'C': suit = 0; break;
@@ -73,24 +71,25 @@
 //            case 's': case 'S': suit = 3; break;
 //            default: bad_card = true;
 //        }
+//
 //        while ((ch = getchar()) != '\n')
 //            if (ch != ' ') bad_card = true;
-//
 //        if (bad_card){
 //            printf("Bad card; ignored.\n");
 //            continue;
 //        }
 //
 //        bool duplicate = false;
-//        for (int i = 0; i < cards_read; i++) {
-//            if (hand[i][0] == rank && hand[i][1] == suit) {
+//        for(int i = 0; i < cards_read; i++){
+//            if(hand[i][0] == rank && hand[i][1] == suit){
 //                duplicate = true;
 //                break;
 //            }
 //        }
-//        if (duplicate){
+//
+//        if(duplicate){
 //            printf("Duplicate card; ignored.\n");
-//        }else {
+//        } else{
 //            hand[cards_read][0] = rank;
 //            hand[cards_read][1] = suit;
 //            cards_read++;
@@ -105,10 +104,9 @@
 // * the external variables straight, flush, *
 // * four, three, and pairs. *
 // ************************************************************/
-//void analyze_hand(int hand[][2])
-//{
+//void analyze_hand(int hand[][2]){
 //    int num_in_rank[NUM_RANKS] = {0};
-//    int num_in_suit[NUM_SUITS] = {0};
+//    int num_in_suit[NUM_SUITS] = {0};;
 //    int num_consec = 0;
 //    int rank, suit;
 //
@@ -118,18 +116,18 @@
 //    three = false;
 //    pairs = 0;
 //
-//    /* 统计点数和花色 */
 //    for (int i = 0; i < NUM_CARDS; i++) {
-//        num_in_rank[hand[i][0]]++;
-//        num_in_suit[hand[i][1]]++;
+//        rank = hand[i][0];
+//        suit = hand[i][1];
+//        num_in_rank[rank]++;
+//        num_in_suit[suit]++;
 //    }
 //
-//    /* 检查同花 */
+//    /* check for flush */
 //    for (suit = 0; suit < NUM_SUITS; suit++)
 //        if (num_in_suit[suit] == NUM_CARDS)
 //            flush = true;
-//
-//    /* 检查顺子 */
+//    /* check for straight */
 //    rank = 0;
 //    while (num_in_rank[rank] == 0) rank++;
 //    for (; rank < NUM_RANKS && num_in_rank[rank] > 0; rank++)
@@ -138,8 +136,7 @@
 //        straight = true;
 //        return;
 //    }
-//
-//    /* 检查四条、三条和对子 */
+//    /* check for 4-of-a-kind, 3-of-a-kind, and pairs */
 //    for (rank = 0; rank < NUM_RANKS; rank++) {
 //        if (num_in_rank[rank] == 4) four = true;
 //        if (num_in_rank[rank] == 3) three = true;

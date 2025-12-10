@@ -106,6 +106,13 @@ void exercise11_2(void);
 void exercise11_3(void);
 void exercise11_4(void);
 
+void exercise12_1(void);
+void exercise12_2(void);
+void exercise12_3(void);
+void exercise12_4(void);
+void exercise12_5(void);
+void exercise12_6(void);
+void exercise12_7(void);
 
 // 后续添加更多函数声明...
 

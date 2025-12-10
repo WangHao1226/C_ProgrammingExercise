@@ -2,7 +2,6 @@
 ////        和 10）。同花大顺的级别高于其他所有的类别。
 //
 ///* Classifies a poker hand */
-///* Classifies a poker hand */
 //#include <stdbool.h> /* C99 only */
 //#include <stdio.h>
 //#include <stdlib.h>
@@ -12,7 +11,6 @@
 ///* external variables */
 //int num_in_rank[NUM_RANKS];
 //int num_in_suit[NUM_SUITS];
-//bool royal_flush;
 //bool straight, flush, four, three;
 //int pairs; /* can be 0, 1, or 2 */
 ///* prototypes */
@@ -23,8 +21,7 @@
 // * main: Calls read_cards, analyze_hand, and print_result *
 // * repeatedly. *
 // ************************************************************/
-//int exercise10_4(void)
-//{
+//int exercise10_2(void){
 //    for (;;) {
 //        read_cards();
 //        analyze_hand();
@@ -36,23 +33,29 @@
 // * variables num_in_rank and num_in_suit; *
 // * checks for bad cards and duplicate cards. *
 // ************************************************************/
-//void read_cards(void)
-//{
+//void read_cards(void){
 //    bool card_exists[NUM_RANKS][NUM_SUITS];
 //    char ch, rank_ch, suit_ch;
 //    int rank, suit;
 //    bool bad_card;
 //    int cards_read = 0;
-//    for (rank = 0; rank < NUM_RANKS; rank++) {
+//
+//    for(rank = 0; rank < NUM_RANKS; rank++){
 //        num_in_rank[rank] = 0;
-//        for (suit = 0; suit < NUM_SUITS; suit++)
+//        for(suit = 0; suit < NUM_SUITS; suit++){
 //            card_exists[rank][suit] = false;
+//        }
 //    }
-//    for (suit = 0; suit < NUM_SUITS; suit++)
+//
+//    for(suit = 0; suit < NUM_SUITS; suit++){
 //        num_in_suit[suit] = 0;
-//    while (cards_read < NUM_CARDS) {
+//    }
+//
+//    while (cards_read < NUM_CARDS){
 //        bad_card = false;
+//
 //        printf("Enter a card: ");
+//        fflush(stdout);
 //        rank_ch = getchar();
 //        switch (rank_ch) {
 //            case '0': exit(EXIT_SUCCESS);
@@ -71,6 +74,7 @@
 //            case 'a': case 'A': rank = 12; break;
 //            default: bad_card = true;
 //        }
+//
 //        suit_ch = getchar();
 //        switch (suit_ch) {
 //            case 'c': case 'C': suit = 0; break;
@@ -79,6 +83,7 @@
 //            case 's': case 'S': suit = 3; break;
 //            default: bad_card = true;
 //        }
+//
 //        while ((ch = getchar()) != '\n')
 //            if (ch != ' ') bad_card = true;
 //        if (bad_card)
@@ -101,22 +106,20 @@
 // * the external variables straight, flush, *
 // * four, three, and pairs. *
 // ************************************************************/
-//void analyze_hand(void)
-//{
+//void analyze_hand(void){
 //    int num_consec = 0;
 //    int rank, suit;
+//
 //    straight = false;
 //    flush = false;
 //    four = false;
 //    three = false;
 //    pairs = 0;
-//    royal_flush = false;
 //
 //    /* check for flush */
 //    for (suit = 0; suit < NUM_SUITS; suit++)
 //        if (num_in_suit[suit] == NUM_CARDS)
 //            flush = true;
-//
 //    /* check for straight */
 //    rank = 0;
 //    while (num_in_rank[rank] == 0) rank++;
@@ -124,25 +127,8 @@
 //        num_consec++;
 //    if (num_consec == NUM_CARDS) {
 //        straight = true;
+//        return;
 //    }
-//
-//    /* 检查同花大顺：既是同花又是顺子，且包含A、K、Q、J、10 */
-//    if (straight && flush) {
-//        // 检查是否包含10、J、Q、K、A（点数8, 9, 10, 11, 12）
-//        if (num_in_rank[8] == 1 &&  // 10
-//            num_in_rank[9] == 1 &&  // J
-//            num_in_rank[10] == 1 && // Q
-//            num_in_rank[11] == 1 && // K
-//            num_in_rank[12] == 1)   // A
-//        {
-//            royal_flush = true;
-//            // 如果是同花大顺，则不是普通的顺子或同花
-//            straight = false;
-//            flush = false;
-//        }
-//        return;  // 如果是同花顺（包括同花大顺），直接返回
-//    }
-//
 //    /* check for 4-of-a-kind, 3-of-a-kind, and pairs */
 //    for (rank = 0; rank < NUM_RANKS; rank++) {
 //        if (num_in_rank[rank] == 4) four = true;
@@ -158,10 +144,7 @@
 // ************************************************************/
 //void print_result(void)
 //{
-//    if (royal_flush)
-//        printf("Royal flush");  // 同花大顺
-//    else if (straight && flush)
-//        printf("Straight flush");
+//    if (straight && flush) printf("Straight flush");
 //    else if (four) printf("Four of a kind");
 //    else if (three &&
 //             pairs == 1) printf("Full house");

@@ -8,91 +8,81 @@
 ////        栈不为空（或者如果曾经调用过 stack_underflow 函数），那么圆括号或花括号不匹配。如果调用
 ////        stack_overflow 函数，程序显示信息 Stack overflow，并且立刻终止。
 //
+//#include <stdbool.h> /* C99 only */
 //#include <stdio.h>
-//#include <stdbool.h>
 //#include <stdlib.h>
 //
 //#define STACK_SIZE 100
 //
+///* external variables */
 //int contents[STACK_SIZE];
 //int top = 0;
 //
-//void make_empty(void){
+//void make_empty(void)
+//{
 //    top = 0;
 //}
 //
-//bool is_empty(void){
+//bool is_empty(void)
+//{
 //    return top == 0;
 //}
 //
-//bool is_full(void){
+//bool is_full(void)
+//{
 //    return top == STACK_SIZE;
 //}
 //
-//int stack_overflow(){
-//    printf("Stack overflow.\n");
+//void stack_overflow(){
+//    printf("Stack overflow\n");
 //    exit(EXIT_FAILURE);
 //}
 //
-//int stack_underflow(){
-//    printf("Stack underflow.\n");
+//void stack_underflow(){
+//    printf("Stack underflow\n");
 //    exit(EXIT_FAILURE);
 //}
 //
-//
-//void push(char ch){
+//void push(int i)
+//{
 //    if (is_full())
 //        stack_overflow();
 //    else
-//        contents[top++] = ch;
+//        contents[top++] = i;
 //}
 //
-//int pop(void){
+//int pop(void)
+//{
 //    if (is_empty())
 //        stack_underflow();
 //    else
 //        return contents [--top];
 //}
 //
-//
-//
 //int exercise10_1(){
-//    char ch;
-//
-//    printf("Enter parentheses and/or braces: ");
+//    printf("Enter parenteses and/or braces: ");
 //    fflush(stdout);
 //
-//    // 读取字符直到换行符
-//    while ((ch = getchar()) != '\n') {
-//        // 如果是左括号，压入栈中
-//        if (ch == '(' || ch == '{') {
+//    char ch;
+//    while ((ch = getchar()) != '\n'){
+//        if(ch == '(' || ch == '{'){
 //            push(ch);
-//        }
-//            // 如果是右括号，检查是否匹配
-//        else if (ch == ')' || ch == '}') {
-//            if (is_empty()) {
-//                // 栈为空但遇到右括号，不匹配
+//        } else if(ch == ')' || ch == '}'){
+//            if(is_empty()){
 //                printf("Parentheses/braces are NOT nested properly\n");
 //                return 0;
 //            }
 //
-//            char left = pop();  // 弹出栈顶的左括号
-//
-//            // 检查是否匹配
+//            char left = pop();
 //            if ((ch == ')' && left != '(') || (ch == '}' && left != '{')) {
 //                printf("Parentheses/braces are NOT nested properly\n");
 //                return 0;
 //            }
 //        }
-//        // 如果输入其他字符，可以忽略或给出提示
-//        // 根据题目要求，我们只检查括号和花括号，所以其他字符可以忽略
 //    }
-//
-//    // 所有字符处理完毕，检查栈是否为空
 //    if (is_empty()) {
 //        printf("Parentheses/braces are nested properly\n");
 //    } else {
 //        printf("Parentheses/braces are NOT nested properly\n");
 //    }
-//
 //}
