@@ -1,3 +1,4 @@
+//4. 请利用数组名可以用作指针的事实简化编程题 2(b)的程序。
 //2. (a) 编写程序读一条消息，然后检查这条消息是否是回文（消息中的字母从左往右读和从右往左读是
 //        一样的）：
 //Enter a message: He lived as a devil, eh?
@@ -12,34 +13,7 @@
 
 #define N 100
 
-//void exercise12_2(void){
-//    printf("Enter a message: ");
-//    fflush(stdout);
-//
-//    char ch, arr[N];
-//    int len = 0;
-//
-//    while ((ch = getchar()) != '\n' && len < N){
-//        if(isalpha(ch){
-//            arr[len++] = ch;
-//        }
-//    }
-//
-//    int is_palindrome = 1;
-//    for(int i = 0; i < len / 2; i++){
-//        if(arr[i] != arr[len - i - 1]){
-//            is_palindrome = 0;
-//            break;
-//        }
-//    }
-//    if (is_palindrome) {
-//        printf("Palindrome\n");
-//    } else {
-//        printf("Not a palindrome\n");
-//    }
-//}
-
-void exercise12_2(void){
+void exercise12_4(void){
     printf("Enter a message: ");
     fflush(stdout);
 

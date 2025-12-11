@@ -109,10 +109,10 @@ int main() {
 //    exercise11_4();
 
 //    exercise12_1();
-    exercise12_2();
+//    exercise12_2();
 //    exercise12_3();
 //    exercise12_4();
-//    exercise12_5();
+    exercise12_5();
 //    exercise12_6();
 //    exercise12_7();
     return 0;
