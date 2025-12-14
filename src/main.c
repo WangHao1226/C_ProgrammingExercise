@@ -112,8 +112,27 @@ int main() {
 //    exercise12_2();
 //    exercise12_3();
 //    exercise12_4();
-    exercise12_5();
+//    exercise12_5();
 //    exercise12_6();
 //    exercise12_7();
+
+//    exercise13_1();
+//    exercise13_2();
+//    exercise13_3();
+//    exercise13_4();
+//    exercise13_5();
+//    exercise13_6();
+//    exercise13_7();
+    exercise13_8();
+//    exercise13_9();
+//    exercise13_10();
+//    exercise13_11();
+//    exercise13_12();
+//    exercise13_13();
+//    exercise13_14();
+//    exercise13_15();
+//    exercise13_16();
+//    exercise13_17();
+//    exercise13_18();
     return 0;
 }
