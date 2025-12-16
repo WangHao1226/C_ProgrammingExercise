@@ -123,12 +123,12 @@ int main() {
 //    exercise13_5();
 //    exercise13_6();
 //    exercise13_7();
-    exercise13_8();
+//    exercise13_8();
 //    exercise13_9();
 //    exercise13_10();
 //    exercise13_11();
 //    exercise13_12();
-//    exercise13_13();
+    exercise13_13();
 //    exercise13_14();
 //    exercise13_15();
 //    exercise13_16();

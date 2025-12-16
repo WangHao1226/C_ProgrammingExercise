@@ -13,6 +13,7 @@
 #include <ctype.h>
 
 #define MAX_WORD_LEN 100
+
 int compute_scrabble_value(const char *word);
 
 int exercise13_8() {
