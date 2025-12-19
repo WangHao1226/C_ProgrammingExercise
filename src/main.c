@@ -128,11 +128,11 @@ int main() {
 //    exercise13_10();
 //    exercise13_11();
 //    exercise13_12();
-    exercise13_13();
+//    exercise13_13();
 //    exercise13_14();
 //    exercise13_15();
 //    exercise13_16();
 //    exercise13_17();
-//    exercise13_18();
+    exercise13_18();
     return 0;
 }
