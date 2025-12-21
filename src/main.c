@@ -133,6 +133,11 @@ int main() {
 //    exercise13_15();
 //    exercise13_16();
 //    exercise13_17();
-    exercise13_18();
+//    exercise13_18();
+
+//    exercise15_1();
+//    exercise15_3();
+//    exercise15_4();
+    exercise15_5();
     return 0;
 }

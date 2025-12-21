@@ -133,6 +133,12 @@ void exercise13_16(void);
 void exercise13_17(void);
 void exercise13_18(void);
 
+void exercise15_1(void);
+void exercise15_3(void);
+void exercise15_4(void);
+void exercise15_5(void);
+
+
 // 后续添加更多函数声明...
 
 #endif
