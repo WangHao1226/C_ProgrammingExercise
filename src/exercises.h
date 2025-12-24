@@ -138,6 +138,13 @@ void exercise15_3(void);
 void exercise15_4(void);
 void exercise15_5(void);
 
+void exercise16_1(void);
+void exercise16_2(void);
+void exercise16_3(void);
+void exercise16_4(void);
+void exercise16_5(void);
+void exercise16_6(void);
+
 
 // 后续添加更多函数声明...
 
