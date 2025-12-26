@@ -142,9 +142,17 @@ int main() {
 
 //    exercise16_1();
 //    exercise16_2();
-    exercise16_3();
+//    exercise16_3();
 //    exercise16_4();
 //    exercise16_5();
 //    exercise16_6();
+
+    exercise17_1();
+//    exercise17_2();
+//    exercise17_3();
+//    exercise17_4();
+//    exercise17_5();
+//    exercise17_6();
+//    exercise17_7();
     return 0;
 }

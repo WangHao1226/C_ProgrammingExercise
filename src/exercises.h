@@ -145,6 +145,14 @@ void exercise16_4(void);
 void exercise16_5(void);
 void exercise16_6(void);
 
+void exercise17_1(void);
+void exercise17_2(void);
+void exercise17_3(void);
+void exercise17_4(void);
+void exercise17_5(void);
+void exercise17_6(void);
+void exercise17_7(void);
+
 
 // 后续添加更多函数声明...
 
