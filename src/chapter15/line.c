@@ -1,87 +1,130 @@
+//4. 修改 15.3 节的程序 justify，重新编写 line.c 文件使其存储链表中的当前行。链表中的每个结点存储一
+//
+//        个单词。用一个指向包含第一个单词的结点的指针变量来替换原有的 line 数组，当行为空时该变量
+//        存储空指针。
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 #include "line.h"
 #include <stdbool.h>
 
-#define MAX_LINE_LEN 60
-char line[MAX_LINE_LEN+1];
+#define MAX_WORD_LEN 20
+
+struct node{
+    char word[MAX_WORD_LEN + 1];
+    struct node *next;
+};
+
+struct node *line_head = NULL;
+struct node *line_tail = NULL;
 int line_len = 0;
 int num_words = 0;
+
 void clear_line(void)
 {
-    line[0] = '\0';
+    struct node *current = line_head;
+    struct node *next;
+    while (current != NULL){
+        next = current->next;
+        free(current);
+        current = next;
+    }
+    line_head = NULL;
+    line_tail = NULL;
     line_len = 0;
     num_words = 0;
 }
 void add_word(const char *word)
 {
-    if (num_words > 0) {
-        line[line_len] = ' ';
-        line[line_len+1] = '\0';
+    struct node *new_node;
+
+    new_node = malloc(sizeof (struct node));
+    if (new_node == NULL) {
+        printf("Error: Out of memory\n");
+        return;
+    }
+
+    strncpy(new_node->word, word, MAX_WORD_LEN);
+    new_node->word[MAX_WORD_LEN] = '\0';
+    new_node->next = NULL;
+
+    if(num_words > 0){
         line_len++;
     }
-    strcat(line, word);
     line_len += strlen(word);
     num_words++;
+
+    if(line_head == NULL){
+        line_head = new_node;
+        line_tail = new_node;
+    } else{
+        line_tail->next = new_node;
+        line_tail = new_node;
+    }
 }
 int space_remaining(void)
 {
-    return MAX_LINE_LEN - line_len;
+    return MAX_WORD_LEN - line_len;
 }
 void write_line(void) {
     int extra_spaces, spaces_to_insert, i, j;
+    struct node *current;
     // 静态变量用于跟踪交替方向
     static bool right_justify = true;
 
-    extra_spaces = MAX_LINE_LEN - line_len;
+    extra_spaces = MAX_WORD_LEN - line_len;
 
     // 如果没有多余的空白或只有一个单词，直接输出
     if (extra_spaces == 0 || num_words == 1) {
-        puts(line);
+        current = line_head;
+        while (current != NULL){
+            printf("%s", current->word);
+            current = current->next;
+            if(current != NULL){
+                putchar(' ');
+            }
+        }
+        putchar('\n');
         right_justify = !right_justify;  // 仍然切换方向
         return;
     }
 
     // 如果需要右对齐（行尾间隔大）
     if (right_justify) {
-        for (i = 0; i < line_len; i++) {
-            if (line[i] != ' ')
-                putchar(line[i]);
-            else {
-                spaces_to_insert = extra_spaces / (num_words - 1);
-                for (j = 1; j <= spaces_to_insert + 1; j++)
+        current = line_head;
+        int words_left = num_words;
+
+        while (current != NULL) {
+            printf("%s", current->word);
+            words_left--;
+            current = current->next;
+
+            // 如果不是最后一个单词，添加空格
+            if (current != NULL) {
+                spaces_to_insert = extra_spaces / words_left;
+                for (j = 0; j <= spaces_to_insert; j++) {
                     putchar(' ');
+                }
                 extra_spaces -= spaces_to_insert;
-                num_words--;
             }
         }
     }
         // 如果需要左对齐（行首间隔大）
     else {
-        // 复制 line 到一个数组中以便处理
-        char line_copy[MAX_LINE_LEN + 1];
-        strcpy(line_copy, line);
-
-        // 计算每个单词间隔应该插入的空格数
         int gaps = num_words - 1;
         int spaces_per_gap = extra_spaces / gaps;
         int remaining_spaces = extra_spaces % gaps;
 
-        // 遍历行，输出单词和空格
-        i = 0;
+        current = line_head;
         int word_count = 0;
 
-        while (line_copy[i] != '\0' && word_count < num_words) {
-            // 输出一个单词
-            while (line_copy[i] != ' ' && line_copy[i] != '\0') {
-                putchar(line_copy[i]);
-                i++;
-            }
-
+        while (current != NULL) {
+            printf("%s", current->word);
             word_count++;
+            current = current->next;
 
-            // 如果不是最后一个单词，输出空格
-            if (word_count < num_words) {
+            // 如果不是最后一个单词，添加空格
+            if (current != NULL) {
                 // 计算这个间隔的空格数
                 int spaces = 1 + spaces_per_gap;  // 基础空格
 
@@ -95,11 +138,6 @@ void write_line(void) {
                 for (j = 0; j < spaces; j++) {
                     putchar(' ');
                 }
-
-                // 跳过原行中的空格
-                while (line_copy[i] == ' ') {
-                    i++;
-                }
             }
         }
     }
@@ -109,6 +147,16 @@ void write_line(void) {
 }
 void flush_line(void)
 {
-    if (line_len > 0)
-        puts(line);
+    struct node *current = line_head;
+
+    if (line_len > 0) {
+        while (current != NULL) {
+            printf("%s", current->word);
+            current = current->next;
+            if (current != NULL) {
+                putchar(' ');
+            }
+        }
+        putchar('\n');
+    }
 }

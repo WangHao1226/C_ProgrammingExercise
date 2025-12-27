@@ -147,12 +147,12 @@ int main() {
 //    exercise16_5();
 //    exercise16_6();
 
-    exercise17_1();
+//    exercise17_1();
 //    exercise17_2();
 //    exercise17_3();
 //    exercise17_4();
 //    exercise17_5();
-//    exercise17_6();
+    exercise17_6();
 //    exercise17_7();
     return 0;
 }
